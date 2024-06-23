@@ -10,7 +10,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000") // Địa chỉ React Dev Server
+                .allowedOrigins("https://graceful-creponne-1ba509.netlify.app") // Địa chỉ React Dev Server
                 .allowedMethods("GET", "POST", "PUT", "DELETE");
     }
     @Override

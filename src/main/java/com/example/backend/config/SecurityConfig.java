@@ -30,6 +30,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 
 @Configuration
 @EnableWebSecurity
@@ -47,6 +49,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
+                .cors(withDefaults()) // Đảm bảo cấu hình CORS được áp dụng
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
                                 .antMatchers("/", "/login", "/register", "/home", "/api/products/**","/api/categories/**","/assets/images/**","/api/payments/**","/update/**","/delete/**","/api/profile")

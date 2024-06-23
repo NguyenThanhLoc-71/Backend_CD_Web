@@ -7,13 +7,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("https://graceful-creponne-1ba509.netlify.app") // Địa chỉ React Dev Server
-                .allowedMethods("GET", "POST", "PUT", "DELETE");
-
-    }
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//                .allowedOrigins("https://graceful-creponne-1ba509.netlify.app") // Địa chỉ React Dev Server
+//                .allowedMethods("GET", "POST", "PUT", "DELETE");
+//
+//    }
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/assets/images/**")

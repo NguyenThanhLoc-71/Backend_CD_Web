@@ -12,7 +12,9 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins("http://localhost:3000","https://symphonious-brioche-9ce70f.netlify.app") // Địa chỉ React Dev Server
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedHeaders("*") ;
+                .allowedHeaders("*")
+                .allowCredentials(true);
+
 
     }
     @Override

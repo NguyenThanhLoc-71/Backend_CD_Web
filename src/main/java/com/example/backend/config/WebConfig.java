@@ -12,6 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins("https://graceful-creponne-1ba509.netlify.app") // Địa chỉ React Dev Server
                 .allowedMethods("GET", "POST", "PUT", "DELETE");
+
     }
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
